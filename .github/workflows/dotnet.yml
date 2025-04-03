@@ -43,4 +43,4 @@ jobs:
       #   run: dotnet test CheckMail.App.Tests/bin/Release/net48/CheckMail.App.Tests.dll
       - name: testt
         shell: pwsh
-        run: docker --info
+        run: docker info
