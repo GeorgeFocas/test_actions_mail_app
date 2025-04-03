@@ -40,4 +40,4 @@ jobs:
         run: msbuild CheckMail.sln /p:Configuration=Release
 
       - name: Test Solution
-        run: vstest.console.exe CheckMail.App.Tests/bin/Release/net48/CheckMail.App.Tests.dll
+        run: dotnet test CheckMail.App.Tests/bin/Release/net48/CheckMail.App.Tests.dll
