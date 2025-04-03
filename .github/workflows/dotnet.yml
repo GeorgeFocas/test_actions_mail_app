@@ -1,0 +1,35 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build .NET Framework
+    runs-on: windows-2025
+
+    steps:
+      # Step 1: Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Install the required version of Visual Studio
+      - name: Setup MSBuild and Visual Studio
+        uses: microsoft/setup-msbuild@v1
+
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v2.0.0
+
+      # Step 3: Build the project using MSBuild
+      - name: Build with MSBuild
+        run: msbuild CheckMail.sln -t:restore /p:Configuration=Release /p:Platform="Any CPU"
+
+      # Step 3: Build the project using MSBuild
+      - name: Test
+        run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj
