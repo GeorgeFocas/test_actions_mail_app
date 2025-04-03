@@ -26,10 +26,10 @@ jobs:
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v2.0.0
 
-      - name: Restore packages
-        shell: pwsh
-        run: dotnet restore CheckMail.App\CheckMail.App.csproj
+      # - name: Restore packages
+      #   shell: pwsh
+     #    run: dotnet restore CheckMail.App\CheckMail.App.csproj
 
       # Step 3: Build the project using MSBuild
       - name: Build with MSBuild
-        run: msbuild CheckMail.sln /p:Configuration=Release /p:Platform="Any CPU"
+        run: msbuild CheckMail.sln -t:restore /p:Configuration=Release /p:Platform="Any CPU"
