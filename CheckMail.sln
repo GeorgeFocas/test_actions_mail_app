@@ -1,10 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35821.62 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckMail.App", "CheckMail.App\CheckMail.App.csproj", "{41B40BD5-AF26-4FC2-B2F7-893E90842CD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckMail.App.Tests", "CheckMail.App.Tests\CheckMail.App.Tests.csproj", "{3B318A32-F1D2-46A4-8E93-8B7458309DAB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{4B4723A3-6392-4569-9FE4-0BB8B7A5205E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckMail.App.Tests2", "CheckMail.App.Tests2\CheckMail.App.Tests2.csproj", "{6916478F-2404-438D-B420-08FD9D688864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,5 +25,12 @@ Global
 		{3B318A32-F1D2-46A4-8E93-8B7458309DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B318A32-F1D2-46A4-8E93-8B7458309DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B318A32-F1D2-46A4-8E93-8B7458309DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6916478F-2404-438D-B420-08FD9D688864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6916478F-2404-438D-B420-08FD9D688864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6916478F-2404-438D-B420-08FD9D688864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6916478F-2404-438D-B420-08FD9D688864}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
