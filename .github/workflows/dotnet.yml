@@ -28,8 +28,7 @@ jobs:
 
       - name: Restore packages
       - shell: pwsh
-      - run: |
-          dotnet restore
+      - run: dotnet restore
 
       # Step 3: Build the project using MSBuild
       - name: Build with MSBuild
