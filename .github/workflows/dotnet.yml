@@ -27,8 +27,8 @@ jobs:
         uses: NuGet/setup-nuget@v2.0.0
 
       - name: Restore packages
-      - shell: pwsh
-      - run: dotnet restore
+        shell: pwsh
+        run: dotnet restore
 
       # Step 3: Build the project using MSBuild
       - name: Build with MSBuild
