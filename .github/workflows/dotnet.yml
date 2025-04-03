@@ -30,4 +30,4 @@ jobs:
       - name: Build and Test
         run: |
           msbuild CheckMail.sln -t:restore /p:Configuration=Release /p:Platform="Any CPU"
-          dotnet test --nobuild
+          dotnet test --no-build
