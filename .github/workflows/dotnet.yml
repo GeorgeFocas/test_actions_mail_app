@@ -27,6 +27,7 @@ jobs:
         uses: NuGet/setup-nuget@v2.0.0
 
       - name: Restore packages
+      - shell: pwsh
       - run: |
           dotnet restore
 
