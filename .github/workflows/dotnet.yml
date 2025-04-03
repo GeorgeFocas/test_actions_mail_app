@@ -23,6 +23,13 @@ jobs:
       - name: Setup MSBuild and Visual Studio
         uses: microsoft/setup-msbuild@v1
 
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v2.0.0
+
+      - name: Restore packages
+      - run: |
+          dotnet restore
+
       # Step 3: Build the project using MSBuild
       - name: Build with MSBuild
         run: msbuild CheckMail.sln /p:Configuration=Release /p:Platform="Any CPU"
