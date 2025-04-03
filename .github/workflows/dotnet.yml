@@ -28,7 +28,7 @@ jobs:
 
       - name: Restore packages
         shell: pwsh
-        run: dotnet restore
+        run: dotnet restore CheckMail.sln
 
       # Step 3: Build the project using MSBuild
       - name: Build with MSBuild
