@@ -26,10 +26,10 @@ jobs:
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v2.0.0
 
-      - name: WSL list
-        shell: pwsh
-        run: docker ps
-
       # Step 3: Build the project using MSBuild
       - name: Build with MSBuild
         run: msbuild CheckMail.sln -t:restore /p:Configuration=Release /p:Platform="Any CPU"
+
+      # Step 3: Build the project using MSBuild
+      - name: Test
+        run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj --no-build
