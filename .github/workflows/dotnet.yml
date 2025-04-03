@@ -34,10 +34,10 @@ jobs:
       # - name: Test
       #   run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj
       - name: Restore NuGet Packages
-        run: nuget restore MySolution.sln
+        run: nuget restore CheckMail.sln
 
       - name: Build Solution
-        run: msbuild MySolution.sln /p:Configuration=Release
+        run: msbuild CheckMail.sln /p:Configuration=Release
 
       - name: Test Solution
-        run: vstest.console.exe MySolution.Tests/bin/Release/MySolution.Tests.dll
+        run: vstest.console.exe CheckMail.App.Tests/bin/Release/net48/CheckMail.App.Tests.dll
