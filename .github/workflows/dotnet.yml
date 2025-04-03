@@ -28,7 +28,7 @@ jobs:
 
       - name: WSL list
         shell: pwsh
-        run: wsl --list
+        run: docker ps
 
       # Step 3: Build the project using MSBuild
       - name: Build with MSBuild
