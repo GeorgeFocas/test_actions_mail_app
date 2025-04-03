@@ -29,6 +29,5 @@ jobs:
       # Step 3: Build the project using MSBuild
       - name: Build and Test
         run: |
-          dotnet restore CheckMail.sln
-          dotnet build
+          msbuild CheckMail.sln -t:restore /p:Configuration=Debug /p:Platform="Any CPU"
           dotnet test
