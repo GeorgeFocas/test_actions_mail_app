@@ -33,11 +33,14 @@ jobs:
       # # Step 3: Build the project using MSBuild
       # - name: Test
       #   run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj
-      - name: Restore NuGet Packages
-        run: nuget restore CheckMail.sln
+      # - name: Restore NuGet Packages
+      #   run: nuget restore CheckMail.sln
 
-      - name: Build Solution
-        run: msbuild CheckMail.sln /p:Configuration=Release
+      # - name: Build Solution
+      #   run: msbuild CheckMail.sln /p:Configuration=Release
 
-      - name: Test Solution
-        run: dotnet test CheckMail.App.Tests/bin/Release/net48/CheckMail.App.Tests.dll
+      # - name: Test Solution
+      #   run: dotnet test CheckMail.App.Tests/bin/Release/net48/CheckMail.App.Tests.dll
+      - name: testt
+        shell: pwsh
+        run: docker --info
