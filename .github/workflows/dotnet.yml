@@ -32,4 +32,4 @@ jobs:
 
       # Step 3: Build the project using MSBuild
       - name: Test
-        run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj --no-build
+        run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj
