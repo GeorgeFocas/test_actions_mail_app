@@ -26,10 +26,18 @@ jobs:
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v2.0.0
 
-      # Step 3: Build the project using MSBuild
-      - name: Build with MSBuild
-        run: msbuild CheckMail.sln -t:restore /p:Configuration=Release /p:Platform="Any CPU"
+      # # Step 3: Build the project using MSBuild
+      # - name: Build with MSBuild
+      #   run: msbuild CheckMail.sln -t:restore /p:Configuration=Release /p:Platform="Any CPU"
 
-      # Step 3: Build the project using MSBuild
-      - name: Test
-        run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj
+      # # Step 3: Build the project using MSBuild
+      # - name: Test
+      #   run: dotnet test CheckMail.App.Tests\CheckMail.App.Tests.csproj
+      - name: Restore NuGet Packages
+        run: nuget restore MySolution.sln
+
+      - name: Build Solution
+        run: msbuild MySolution.sln /p:Configuration=Release
+
+      - name: Test Solution
+        run: vstest.console.exe MySolution.Tests/bin/Release/MySolution.Tests.dll
